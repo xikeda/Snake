@@ -194,9 +194,17 @@ void Logic(){
     }
     if (x > width || x < 0 || y > height || y < 0){
         cout << "####################################################" << endl;
-        cout << "           GAME OVER. YOUR FINAL SCORE:" << score << endl;
+        cout << "   GAME OVER - YOU HIT THE WALL. FINAL SCORE:" << score << endl;
         cout << "####################################################" << endl;
         gameOver = true; // Gameover if user exits map
+    }
+    for (int i = 0; i < nTail; i++){
+        if(tailX[i] == x && tailY[i] == y){
+            cout << "####################################################" << endl;
+            cout << "   GAME OVER - YOU HIT YOURSELF. FINAL SCORE:" << score << endl;
+            cout << "####################################################" << endl;
+            gameOver = true;
+        }
     }
     if (x == fruitX && y == fruitY){
         nTail++; // Grow from eating the fruit
