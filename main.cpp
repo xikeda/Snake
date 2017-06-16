@@ -11,7 +11,7 @@ using namespace std;
 /************************* Variables *************************/
 
 bool gameOver; // Trigger
-const int width = 20: // Map Dimensions
+const int width = 20; // Map Dimensions
 const int height = 20; // Map Dimensions
 int x, y; // Head Position
 int fruitX, fruitY; // Fruit Position
@@ -20,7 +20,7 @@ enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN}; // Direction of Snake
 eDirecton dir; // Direction of the Snake
 
 // Basic functions
-void setup(){
+void Setup(){
     gameOver = false; // Trigger
     dir = STOP; // Still
     x = width / 2; // Start centered
@@ -30,13 +30,13 @@ void setup(){
     score = 0; // Score initalized at 0
 }
 
-void draw(){
+void Draw(){
     system("clear"); // Clear map
     
     // Print walls
     for (int i = 0; i < width; i++) 
         cout << "#";
-    cout << end1;
+    cout << endl;
     
     for (int i = 0; i < height; i++){
         
@@ -55,26 +55,26 @@ void draw(){
     
     for (int i = 0; i < width; i++) 
         cout << "#";
-    cout << end1;
+    cout << endl;
     
 }
 
-void input(){
+void Input(){
     
 }
 
-void logic(){
+void Logic(){
     
 }
 
 /*************************   Main   *************************/
 int main(){
-    setup();
+    Setup();
     while(!gameOver){
-        draw();
-        input();
-        logic();
-        //sleep(10);
+        Draw();
+        Input();
+        Logic();
+        //Sleep(10);
     }
     return 0;
 }
